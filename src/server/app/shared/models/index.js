@@ -9,13 +9,16 @@ import { eventSchema } from './event';
 import alertSchema from './alert';
 import groupSchema from './group';
 import agencySchema from './agency';
+import deviceSchema from './device';
 
 const schemas = [
   userSchema,
   sessionSchema,
   eventSchema,
   alertSchema,
-  groupSchema
+  groupSchema,
+  deviceSchema
+
 ];
 
 schemas.map((schema) => {
@@ -59,3 +62,4 @@ export const Alert = mongoose.model('Alert', alertSchema);
 export const User = mongoose.model('User', userSchema);
 export const Group = mongoose.model('Group', groupSchema);
 export const Session = mongoose.model('Session', sessionSchema);
+export const Device = mongoose.model('Device', deviceSchema);
